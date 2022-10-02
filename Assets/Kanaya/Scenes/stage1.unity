@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3253123b6b09e0341bb4008ae6aa6234, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -469,9 +469,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6195098854980194093, guid: 047c692fb9741024e8e08e7766c95efa, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
+    - target: {fileID: 1789745515922699374, guid: 047c692fb9741024e8e08e7766c95efa, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6195098854980194095, guid: 047c692fb9741024e8e08e7766c95efa, type: 3}
       propertyPath: m_RootOrder
@@ -3187,7 +3187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2130158028
 RectTransform:
   m_ObjectHideFlags: 0

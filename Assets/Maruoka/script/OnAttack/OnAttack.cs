@@ -19,7 +19,7 @@ public class OnAttack : MonoBehaviour
     //===== フィールド =====//
     bool _isAttack = true;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         // 攻撃可能かつ 相手がヒットポイントを持っており かつ 同類でなければ
         // 相手のライフを減らす。
@@ -27,6 +27,7 @@ public class OnAttack : MonoBehaviour
             other.TryGetComponent(out HitPoint hitPoint) &&
             gameObject.tag != other.tag)
         {
+
             hitPoint.OnHitDamage(_damage);
             StartCoroutine(WaitAttackInterval());
             GetComponent<AudioSource>()?.Play();

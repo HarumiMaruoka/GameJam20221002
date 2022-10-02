@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class ImEnemy : MonoBehaviour
 {
+    GameManager _gameManager;
+    private void Start()
+    {
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
     private void OnDestroy()
     {
-        GameObject.FindObjectOfType<GameManager>()._howManyEnemy--;
+        _gameManager._howManyEnemy--;
     }
 
 }
