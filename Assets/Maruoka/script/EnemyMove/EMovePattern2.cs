@@ -29,7 +29,7 @@ public class EMovePattern2 : EMoveBase
     }
     protected override void Move()
     {
-        // 
+        // 移動を制御
         Vector3 targetVector = (_playerTransform.position - transform.position).normalized;
         _rigidbody.velocity =
             (Vector3.right * targetVector.x + Vector3.forward * targetVector.z) * _moveSpeed +
@@ -37,7 +37,7 @@ public class EMovePattern2 : EMoveBase
 
         Debug.Log(_rigidbody.velocity);
 
-        // 
+        // 向きを制御
         this.transform.LookAt(_playerTransform);
         var rotation = transform.rotation;
         rotation.z = 0f;
