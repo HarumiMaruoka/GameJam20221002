@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     HitPoint _playerLife;
     [Header("敵の数"), SerializeField]
-    int _howManyEnemy = 0;
+    public int _howManyEnemy = 0;
     [Header("ゲームオーバーのシーン名"), SerializeField]
     string _gameOverSceneName = "GameOver";
     [Header("ゲームクリアーのシーン名"), SerializeField]
