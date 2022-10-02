@@ -35,9 +35,7 @@ public class EMovePattern2 : EMoveBase
             (Vector3.right * targetVector.x + Vector3.forward * targetVector.z) * _moveSpeed +
             Vector3.up * _rigidbody.velocity.y;
 
-
-
-        targetVector.y = _rigidbody.velocity.y;
+        Debug.Log(_rigidbody.velocity);
 
         // 
         this.transform.LookAt(_playerTransform);
@@ -45,5 +43,7 @@ public class EMovePattern2 : EMoveBase
         rotation.z = 0f;
         rotation.x = 0f;
         transform.rotation = rotation;
+
+
     }
 }
