@@ -11,10 +11,11 @@ public class HitPoint : MonoBehaviour
     [Header("体力に関わる値")]
     [Tooltip("体力"), SerializeField]
     float _hitPoint = 5f;
-
-    [Header("倒された際に関わるモノ")]
     [Tooltip("倒された時にプレハブを生成する"), SerializeField]
     GameObject _destroyEffect = default;
+
+    //===== プロパティ =====//
+    public float MyHitPoint { get => _hitPoint; }
 
     //===== publicメソッド =====//
     public void OnHitDamage(float damage)

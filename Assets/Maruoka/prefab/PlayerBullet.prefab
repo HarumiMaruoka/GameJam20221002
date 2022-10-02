@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 4699450261572313294}
   - component: {fileID: 377007934900530459}
   - component: {fileID: 4318012482771767200}
+  - component: {fileID: 5777776631161692890}
   m_Layer: 0
-  m_Name: Bullet
-  m_TagString: Untagged
+  m_Name: PlayerBullet
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +95,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4758030420359083944}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -127,4 +128,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18825eb9fe6d8384cb2ea0c45cccd72f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 100
+  _moveSpeed: 30
+  _lifeTime: 1
+--- !u!114 &5777776631161692890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758030420359083944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37091c388c7e6b3469c20dca02e3a4a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 1
+  _isBullet: 1
+  _attackInterval: 1

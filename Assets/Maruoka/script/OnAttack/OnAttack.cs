@@ -10,6 +10,8 @@ public class OnAttack : MonoBehaviour
     [Header("攻撃処理に関わる値")]
     [Tooltip("攻撃力 : 相手に与えるダメージ量"), SerializeField]
     float _damage = 1f;
+    [Tooltip("弾かどうか"),SerializeField]
+    bool _isBullet = false;
     [Tooltip("攻撃のインターバル"), SerializeField]
     float _attackInterval = 1f;
 
@@ -24,7 +26,13 @@ public class OnAttack : MonoBehaviour
             other.TryGetComponent(out HitPoint hitPoint) &&
             gameObject.tag != other.tag)
         {
+            Debug.Log("実行されてるよ");
             hitPoint.OnHitDamage(_damage);
+            StartCoroutine(WaitAttackInterval());
+        }
+        if (_isBullet)
+        {
+            Destroy(gameObject);
         }
     }
 
