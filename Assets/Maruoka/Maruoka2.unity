@@ -123,25 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &146091935 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4111634371597379175, guid: 047c692fb9741024e8e08e7766c95efa, type: 3}
-  m_PrefabInstance: {fileID: 6195098855388715246}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &146091937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146091935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244479f6aa9e19e458d28b0aea82aeea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bullet: {fileID: 4758030420359083944, guid: 8a9e755255199c743ab7ea5c8eb4e7ef, type: 3}
-  _fire1Interval: 0.5
 --- !u!4 &408524737 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6195098854980194095, guid: 047c692fb9741024e8e08e7766c95efa, type: 3}
@@ -464,14 +445,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3132193941696150799, guid: 047c692fb9741024e8e08e7766c95efa, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6195098854980194093, guid: 047c692fb9741024e8e08e7766c95efa, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6195098854980194095, guid: 047c692fb9741024e8e08e7766c95efa, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -519,10 +492,6 @@ PrefabInstance:
     - target: {fileID: 6195098854980194131, guid: 047c692fb9741024e8e08e7766c95efa, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7823731872483970385, guid: 047c692fb9741024e8e08e7766c95efa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 047c692fb9741024e8e08e7766c95efa, type: 3}

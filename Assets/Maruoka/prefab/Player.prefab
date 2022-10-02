@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 7435344340592484052}
   - component: {fileID: 7820651446980850763}
   - component: {fileID: 3132193941696150799}
+  - component: {fileID: 146091937}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -124,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4111634371597379175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.69}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -190,10 +191,24 @@ BoxCollider:
   m_GameObject: {fileID: 4111634371597379175}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &146091937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4111634371597379175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244479f6aa9e19e458d28b0aea82aeea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bullet: {fileID: 4758030420359083944, guid: 8a9e755255199c743ab7ea5c8eb4e7ef, type: 3}
+  _fire1Interval: 0.5
 --- !u!1 &6195098854980194131
 GameObject:
   m_ObjectHideFlags: 0
