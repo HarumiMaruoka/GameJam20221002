@@ -15,6 +15,7 @@ public class OnAttack : MonoBehaviour
     [Tooltip("攻撃のインターバル"), SerializeField]
     float _attackInterval = 1f;
 
+
     //===== フィールド =====//
     bool _isAttack = true;
 
@@ -28,11 +29,13 @@ public class OnAttack : MonoBehaviour
         {
             hitPoint.OnHitDamage(_damage);
             StartCoroutine(WaitAttackInterval());
+            GetComponent<AudioSource>()?.Play();
         }
         if (gameObject.tag != other.tag && _isBullet)
         {
             Debug.Log($"{gameObject.tag}");
             Destroy(gameObject);
+            GetComponent<AudioSource>()?.Play();
         }
     }
 

@@ -8,4 +8,5 @@ public class ImEnemy : MonoBehaviour
     {
         GameObject.FindObjectOfType<GameManager>()._howManyEnemy--;
     }
+
 }

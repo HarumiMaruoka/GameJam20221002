@@ -17,6 +17,7 @@ public class PlayerWeaponController : MonoBehaviour
 
     //===== フィールド =====//
     bool _isFire1 = true;
+    AudioSource _audioSource;
 
 
     //===== Unityメッセージ =====//
@@ -33,6 +34,7 @@ public class PlayerWeaponController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && _isFire1)
         {
             Instantiate(_bullet, transform.position, transform.rotation);
+            _audioSource?.Play();
         }
     }
 

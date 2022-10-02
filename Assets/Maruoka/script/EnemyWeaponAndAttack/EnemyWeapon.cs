@@ -20,10 +20,12 @@ public class EnemyWeapon : MonoBehaviour
     Transform _playerTransform = default;
     bool _isFire = false;
     bool _isFight = false;
+    AudioSource _audioSource;
 
 
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
     void Update()
@@ -51,6 +53,7 @@ public class EnemyWeapon : MonoBehaviour
         if (_isFire)
         {
             Instantiate(_bullet, transform.position, transform.rotation);
+            _audioSource?.Play();
             StartCoroutine(WaitFireInterval());
         }
     }
