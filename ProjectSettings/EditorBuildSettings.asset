@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Kanaya/Scenes/TitleScene.unity
+    guid: 3b1080082d37c354299bf6dac1dfd6a1
+  - enabled: 1
+    path: Assets/Kanaya/Scenes/stage1.unity
+    guid: 4f647ef36a3c44e43b6487939587c71b
+  - enabled: 1
+    path: Assets/Scenes/GameClearScene.unity
+    guid: 18c4e2c0135888243b294c95f9454481
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+    guid: 0f34c978cade6994c9cf9538e6366bad
   m_configObjects: {}

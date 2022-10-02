@@ -34,7 +34,7 @@ public class PlayerWeaponController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && _isFire1)
         {
             Instantiate(_bullet, transform.position, transform.rotation);
-            _audioSource?.Play();
+            GetComponent<AudioSource>()?.Play();
         }
     }
 
