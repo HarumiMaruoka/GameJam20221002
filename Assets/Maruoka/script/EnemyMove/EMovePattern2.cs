@@ -1,20 +1,20 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// “G‚ÌˆÚ“®‚ğ§Œä‚·‚éƒRƒ“ƒ|[ƒlƒ“ƒg <br/>
-/// ƒpƒ^[ƒ“‚»‚Ì2 <br/>
-/// ƒvƒŒƒCƒ„[‚ÉŒü‚©‚Á‚Äˆê’è‘¬“x‚ÅŒü‚©‚Á‚Ä‚­‚é <br/>
+/// æ•µã®ç§»å‹•ã‚’åˆ¶å¾¡ã™ã‚‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ <br/>
+/// ãƒ‘ã‚¿ãƒ¼ãƒ³ãã®2 <br/>
+/// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã«å‘ã‹ã£ã¦ä¸€å®šé€Ÿåº¦ã§å‘ã‹ã£ã¦ãã‚‹ <br/>
 /// </summary>
 public class EMovePattern2 : EMoveBase
 {
-    //===== ƒCƒ“ƒXƒyƒNƒ^•Ï” =====//
-    [Header("ˆÚ“®ŠÖ˜A")]
-    [Tooltip("ˆÚ“®‘¬“x"), SerializeField]
+    //===== ã‚¤ãƒ³ã‚¹ãƒšã‚¯ã‚¿å¤‰æ•° =====//
+    [Header("ç§»å‹•é–¢é€£")]
+    [Tooltip("ç§»å‹•é€Ÿåº¦"), SerializeField]
     float _moveSpeed = 1f;
 
-    //===== ƒtƒB[ƒ‹ƒh =====//
+    //===== ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ =====//
     const string _playerTagName = "Player";
     Transform _playerTransform = default;
 
@@ -22,10 +22,23 @@ public class EMovePattern2 : EMoveBase
     {
         base.Init();
         _playerTransform = GameObject.FindGameObjectWithTag(_playerTagName).transform;
+        if (_playerTransform == null)
+        {
+            Debug.LogError("ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ã‚¿ã‚°ã‚’\"_playerTagName\"ã«è¨­å®šã—ãªãŠã—ã¦ãã ã•ã„ï¼");
+        }
     }
     protected override void Move()
     {
+        // 
         Vector3 targetVector = (_playerTransform.position - transform.position).normalized;
+        targetVector.y = _rigidbody.velocity.y;
         _rigidbody.velocity = targetVector * _moveSpeed;
+
+        // 
+        this.transform.LookAt(_playerTransform);
+        var rotation = transform.rotation;
+        rotation.z = 0f; 
+        rotation.x = 0f;
+        transform.rotation = rotation;
     }
 }

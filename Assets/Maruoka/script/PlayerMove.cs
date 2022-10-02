@@ -82,7 +82,6 @@ public class PlayerMove : MonoBehaviour
             newVelocity * _moveSpeed * speed +
             Vector3.up * _rigidbody.velocity.y;
 
-        Debug.Log(GetIsGround());
         // ジャンプ処理
         if (GetIsGround() && Input.GetButtonDown("Jump"))
         {

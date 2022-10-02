@@ -1,11 +1,11 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// “G‚ÌˆÚ“®‚ğ§Œä‚·‚éƒRƒ“ƒ|[ƒlƒ“ƒg <br/>
-/// ƒpƒ^[ƒ“‚»‚Ì1 <br/>
-/// ‚¶‚Á‚Æ‚µ‚Ä‚¢‚é‚¾‚¯ <br/>
+/// æ•µã®ç§»å‹•ã‚’åˆ¶å¾¡ã™ã‚‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ <br/>
+/// ãƒ‘ã‚¿ãƒ¼ãƒ³ãã®1 <br/>
+/// ã˜ã£ã¨ã—ã¦ã„ã‚‹ã ã‘ <br/>
 /// </summary>
 public class EMovePattern1 : EMoveBase
 {

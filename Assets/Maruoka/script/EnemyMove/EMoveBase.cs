@@ -6,7 +6,7 @@ using UnityEngine;
 /// 敵の移動の基底クラス
 /// </summary>
 [RequireComponent(typeof(Rigidbody))]
-public class EMoveBase : MonoBehaviour
+public abstract class EMoveBase : MonoBehaviour
 {
     protected Rigidbody _rigidbody = default;
     void Start()
