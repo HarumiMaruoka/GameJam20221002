@@ -9,7 +9,7 @@ public class OnAttack : MonoBehaviour
 {
     [Header("攻撃処理に関わる値")]
     [Tooltip("攻撃力 : 相手に与えるダメージ量"), SerializeField]
-    float _damage = 1f;
+    int _damage = 1;
     [Tooltip("弾かどうか"), SerializeField]
     bool _isBullet = false;
     [Tooltip("攻撃のインターバル"), SerializeField]
