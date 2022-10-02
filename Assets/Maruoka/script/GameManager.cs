@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
     HitPoint _playerLife;
     [Header("敵の数"), SerializeField]
     int _howManyEnemy = 0;
+    [Header("ゲームオーバーのシーン名"), SerializeField]
+    string _gameOverSceneName = "GameOver";
+    [Header("ゲームクリアーのシーン名"), SerializeField]
+    string _gameClearSceneName = "GameClear";
 
     void Start()
     {
@@ -17,11 +21,11 @@ public class GameManager : MonoBehaviour
     {
         if (_playerLife.MyHitPoint < 1)
         {
-            SceneLoader.LoadScene("GameOver");
+            SceneLoader.LoadScene(_gameOverSceneName);
         }
         if (_howManyEnemy < 1)
         {
-            SceneLoader.LoadScene("GameClear");
+            SceneLoader.LoadScene(_gameClearSceneName);
         }
     }
 }
